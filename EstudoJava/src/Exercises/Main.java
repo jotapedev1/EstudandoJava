@@ -1,4 +1,4 @@
-package BeeCrowd;
+package Exercises;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -32,7 +32,6 @@ public class Main {
         int SOMA = A+B;
         System.out.println("SOMA = " + SOMA);
     }
-
     public void number4(){
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
@@ -47,4 +46,27 @@ public class Main {
             System.out.println("Valores nao aceitos");
         }
     }
+    public void number5() { //HACKERRANK JAVALOOP II
+        Scanner sc = new Scanner(System.in);
+
+        //quantas vezes a formula roda
+        int t = sc.nextInt();
+
+        for (int i = 0; i < t; i++) {
+            //recebe valores
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = sc.nextInt(); //número de vezes q a formula vai elevar (limite de 10)
+
+            int base = a;
+
+            for (int j = 0; j < n; j++) {
+                base += (int) (Math.pow(2, j) * b);
+                System.out.println(base + " ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
 }
+
